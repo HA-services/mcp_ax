@@ -1,0 +1,29 @@
+id,name,model_id,group_id/id,operation,domain
+access_axsync_mcp_setting_manager,axsync.mcp.setting manager,axsync.mcp.setting,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_tool_manager,axsync.mcp.tool manager,axsync.mcp.tool,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_profile_manager,axsync.mcp.profile manager,axsync.mcp.profile,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_profile_line_manager,axsync.mcp.profile.line manager,axsync.mcp.profile.line,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_token_manager,axsync.mcp.token manager,axsync.mcp.token,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_client_manager,axsync.mcp.client manager,axsync.mcp.client,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_oauth_code_manager,axsync.mcp.oauth.code manager,axsync.mcp.oauth.code,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_policy_manager,axsync.mcp.policy manager,axsync.mcp.policy,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_approval_manager,axsync.mcp.approval manager,axsync.mcp.approval,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_mask_manager,axsync.mcp.mask manager,axsync.mcp.mask,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_prompt_manager,axsync.mcp.prompt manager,axsync.mcp.prompt,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_job_manager,axsync.mcp.job manager,axsync.mcp.job,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_page_manager,axsync.mcp.page manager,axsync.mcp.page,axsync_mcp_server.group_axsync_mcp_manager,crud,
+access_axsync_mcp_journal_manager,axsync.mcp.journal manager,axsync.mcp.journal,axsync_mcp_server.group_axsync_mcp_manager,ru,
+access_axsync_mcp_log_manager,axsync.mcp.log manager,axsync.mcp.log,axsync_mcp_server.group_axsync_mcp_manager,r,
+access_axsync_mcp_tool_user,axsync.mcp.tool user,axsync.mcp.tool,axsync_mcp_server.group_axsync_mcp_user,r,
+access_axsync_mcp_profile_user,axsync.mcp.profile user,axsync.mcp.profile,axsync_mcp_server.group_axsync_mcp_user,r,
+access_axsync_mcp_profile_line_user,axsync.mcp.profile.line user,axsync.mcp.profile.line,axsync_mcp_server.group_axsync_mcp_user,r,
+access_axsync_mcp_policy_user,axsync.mcp.policy user,axsync.mcp.policy,axsync_mcp_server.group_axsync_mcp_user,r,
+access_axsync_mcp_prompt_user,axsync.mcp.prompt user,axsync.mcp.prompt,axsync_mcp_server.group_axsync_mcp_user,r,
+access_axsync_mcp_token_user,axsync.mcp.token user,axsync.mcp.token,axsync_mcp_server.group_axsync_mcp_user,r,"[('user_id', '=', user.id)]"
+access_axsync_mcp_approval_user,axsync.mcp.approval user,axsync.mcp.approval,axsync_mcp_server.group_axsync_mcp_user,r,"[('requester_id', '=', user.id)]"
+access_axsync_mcp_approval_approver,axsync.mcp.approval approver,axsync.mcp.approval,axsync_mcp_server.group_axsync_mcp_approver,ru,
+access_axsync_mcp_journal_user,axsync.mcp.journal user,axsync.mcp.journal,axsync_mcp_server.group_axsync_mcp_user,r,"[('user_id', '=', user.id)]"
+access_axsync_mcp_log_user,axsync.mcp.log user,axsync.mcp.log,axsync_mcp_server.group_axsync_mcp_user,r,"[('user_id', '=', user.id)]"
+access_axsync_mcp_job_user,axsync.mcp.job user,axsync.mcp.job,axsync_mcp_server.group_axsync_mcp_user,r,"[('user_id', '=', user.id)]"
+access_axsync_mcp_page_user,axsync.mcp.page user,axsync.mcp.page,axsync_mcp_server.group_axsync_mcp_user,rud,"[('owner_id', '=', user.id)]"
+access_axsync_mcp_token_wizard_user,axsync.mcp.token.wizard user,axsync.mcp.token.wizard,axsync_mcp_server.group_axsync_mcp_user,crud,

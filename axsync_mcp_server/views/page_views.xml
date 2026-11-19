@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_axsync_mcp_page_list" model="ir.ui.view">
+        <field name="name">axsync.mcp.page.list</field>
+        <field name="model">axsync.mcp.page</field>
+        <field name="arch" type="xml">
+            <list string="Live pages" create="false">
+                <field name="name"/>
+                <field name="owner_id"/>
+                <field name="model"/>
+                <field name="mode"/>
+                <field name="expires_on"/>
+                <field name="view_count"/>
+                <field name="state" widget="badge" decoration-success="state == 'published'"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_axsync_mcp_page_form" model="ir.ui.view">
+        <field name="name">axsync.mcp.page.form</field>
+        <field name="model">axsync.mcp.page</field>
+        <field name="arch" type="xml">
+            <form string="Live page" create="false">
+                <header>
+                    <button name="action_unpublish" type="object" string="Unpublish" invisible="state != 'published'"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="owner_id"/>
+                            <field name="mode"/>
+                            <field name="url" widget="url"/>
+                            <field name="expires_on"/>
+                        </group>
+                        <group>
+                            <field name="model"/>
+                            <field name="domain"/>
+                            <field name="field_names"/>
+                            <field name="group_by"/>
+                            <field name="measure"/>
+                            <field name="chart"/>
+                            <field name="limit"/>
+                            <field name="view_count"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_axsync_mcp_page" model="ir.actions.act_window">
+        <field name="name">Live pages</field>
+        <field name="res_model">axsync.mcp.page</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
