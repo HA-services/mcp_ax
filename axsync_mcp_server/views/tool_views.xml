@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_axsync_mcp_tool_list" model="ir.ui.view">
+        <field name="name">axsync.mcp.tool.list</field>
+        <field name="model">axsync.mcp.tool</field>
+        <field name="arch" type="xml">
+            <tree string="Tools" editable="bottom" create="false" delete="false">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="kind" widget="badge"/>
+                <field name="description"/>
+                <field name="call_count"/>
+                <field name="enabled" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_axsync_mcp_tool" model="ir.actions.act_window">
+        <field name="name">Tools</field>
+        <field name="res_model">axsync.mcp.tool</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

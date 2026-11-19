@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_axsync_mcp_setting_form" model="ir.ui.view">
+        <field name="name">axsync.mcp.setting.form</field>
+        <field name="model">axsync.mcp.setting</field>
+        <field name="arch" type="xml">
+            <form string="MCP Server Settings" create="false" delete="false">
+                <sheet>
+                    <div class="oe_title"><h1>MCP Server Settings</h1></div>
+                    <group>
+                        <group string="Server">
+                            <field name="enabled"/>
+                            <field name="allow_all_internal"/>
+                            <field name="default_profile_id"/>
+                            <field name="default_write_action"/>
+                            <field name="public_base_url" placeholder="https://erp.example.com"/>
+                            <field name="allowed_origins" placeholder="https://inspector.example.com"/>
+                        </group>
+                        <group string="Limits">
+                            <field name="rate_limit"/>
+                            <field name="daily_write_quota"/>
+                            <field name="max_records"/>
+                            <field name="max_text_chars"/>
+                        </group>
+                        <group string="Retention">
+                            <field name="log_retention_days"/>
+                            <field name="journal_retention_days"/>
+                            <field name="token_default_days"/>
+                            <field name="approval_expiry_hours"/>
+                        </group>
+                        <group string="OAuth and masking">
+                            <field name="oauth_enabled"/>
+                            <field name="oauth_access_minutes" attrs="{'invisible': [('oauth_enabled', '=', False)]}"/>
+                            <field name="mask_default_secrets"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_axsync_mcp_setting" model="ir.actions.server">
+        <field name="name">MCP Server Settings</field>
+        <field name="model_id" ref="model_axsync_mcp_setting"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open()</field>
+    </record>
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_axsync_mcp_job_list" model="ir.ui.view">
+        <field name="name">axsync.mcp.job.list</field>
+        <field name="model">axsync.mcp.job</field>
+        <field name="arch" type="xml">
+            <tree string="Bulk jobs" create="false">
+                <field name="create_date"/>
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="total"/>
+                <field name="done"/>
+                <field name="failed"/>
+                <field name="progress" widget="progressbar"/>
+                <field name="state" widget="badge" decoration-info="state == 'running'" decoration-success="state == 'done'" decoration-danger="state == 'failed'"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_axsync_mcp_job_form" model="ir.ui.view">
+        <field name="name">axsync.mcp.job.form</field>
+        <field name="model">axsync.mcp.job</field>
+        <field name="arch" type="xml">
+            <form string="Bulk job" create="false">
+                <header>
+                    <button name="action_cancel" type="object" string="Cancel" attrs="{'invisible': [('state', '!=', 'running')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="user_id"/>
+                            <field name="model"/>
+                            <field name="operation"/>
+                        </group>
+                        <group>
+                            <field name="total"/>
+                            <field name="done"/>
+                            <field name="failed"/>
+                            <field name="batch_size"/>
+                        </group>
+                    </group>
+                    <group string="Values"><field name="values" nolabel="1"/></group>
+                    <group string="Errors"><field name="errors" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_axsync_mcp_job" model="ir.actions.act_window">
+        <field name="name">Bulk jobs</field>
+        <field name="res_model">axsync.mcp.job</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_axsync_mcp_prompt_list" model="ir.ui.view">
+        <field name="name">axsync.mcp.prompt.list</field>
+        <field name="model">axsync.mcp.prompt</field>
+        <field name="arch" type="xml">
+            <tree string="Prompts">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="title"/>
+                <field name="description"/>
+                <field name="argument_names"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_axsync_mcp_prompt_form" model="ir.ui.view">
+        <field name="name">axsync.mcp.prompt.form</field>
+        <field name="model">axsync.mcp.prompt</field>
+        <field name="arch" type="xml">
+            <form string="Prompt">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="title"/>
+                        <field name="description"/>
+                        <field name="argument_names"/>
+                        <field name="active"/>
+                    </group>
+                    <group string="Template"><field name="template" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_axsync_mcp_prompt" model="ir.actions.act_window">
+        <field name="name">Prompts</field>
+        <field name="res_model">axsync.mcp.prompt</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
