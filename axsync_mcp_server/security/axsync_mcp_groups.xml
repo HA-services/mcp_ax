@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_axsync_mcp" model="ir.module.category">
+        <field name="name">MCP Server</field>
+        <field name="sequence">91</field>
+    </record>
+
+    <record id="group_axsync_mcp_user" model="res.groups">
+        <field name="name">MCP User</field>
+        <field name="category_id" ref="module_category_axsync_mcp"/>
+        <field name="comment">Can create personal tokens and connect AI assistants. The assistant always works with the user's own Odoo access rights.</field>
+    </record>
+
+    <record id="group_axsync_mcp_approver" model="res.groups">
+        <field name="name">MCP Approver</field>
+        <field name="category_id" ref="module_category_axsync_mcp"/>
+        <field name="implied_ids" eval="[(4, ref('group_axsync_mcp_user'))]"/>
+        <field name="comment">Can approve or reject actions that AI assistants requested. Nobody can approve their own request.</field>
+    </record>
+
+    <record id="group_axsync_mcp_manager" model="res.groups">
+        <field name="name">MCP Manager</field>
+        <field name="category_id" ref="module_category_axsync_mcp"/>
+        <field name="implied_ids" eval="[(4, ref('group_axsync_mcp_approver'))]"/>
+        <field name="comment">Configures the server: access levels, policies, field masks, tools and settings. Can see every token, log entry and journal entry.</field>
+    </record>
+
+    <record id="base.group_system" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_axsync_mcp_manager'))]"/>
+    </record>
+</odoo>

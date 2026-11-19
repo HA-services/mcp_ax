@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_axsync_mcp_approval_list" model="ir.ui.view">
+        <field name="name">axsync.mcp.approval.list</field>
+        <field name="model">axsync.mcp.approval</field>
+        <field name="arch" type="xml">
+            <list string="Approvals" create="false" decoration-muted="state in ('rejected', 'expired')">
+                <field name="name"/>
+                <field name="create_date"/>
+                <field name="requester_id"/>
+                <field name="tool"/>
+                <field name="model"/>
+                <field name="record_count"/>
+                <field name="summary"/>
+                <field name="state" widget="badge" decoration-warning="state == 'pending'" decoration-success="state == 'approved'" decoration-danger="state in ('rejected', 'failed')"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_axsync_mcp_approval_form" model="ir.ui.view">
+        <field name="name">axsync.mcp.approval.form</field>
+        <field name="model">axsync.mcp.approval</field>
+        <field name="arch" type="xml">
+            <form string="Approval" create="false">
+                <header>
+                    <field name="can_decide" invisible="1"/>
+                    <button name="action_approve" type="object" string="Approve and run" class="btn-primary"
+                            invisible="not can_decide" confirm="Run this action as the requester?"/>
+                    <button name="action_reject" type="object" string="Reject" invisible="not can_decide"/>
+                    <field name="state" widget="statusbar" statusbar_visible="pending,approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="requester_id"/>
+                            <field name="tool"/>
+                            <field name="model"/>
+                            <field name="operation"/>
+                            <field name="record_count"/>
+                        </group>
+                        <group>
+                            <field name="policy_id"/>
+                            <field name="expires_on"/>
+                            <field name="approver_id"/>
+                            <field name="decided_on"/>
+                        </group>
+                    </group>
+                    <separator string="What will happen"/>
+                    <field name="summary" nolabel="1"/>
+                    <separator string="Exact arguments"/>
+                    <field name="arguments" nolabel="1"/>
+                    <separator string="Result" invisible="not result"/>
+                    <field name="result" nolabel="1" invisible="not result"/>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="view_axsync_mcp_approval_search" model="ir.ui.view">
+        <field name="name">axsync.mcp.approval.search</field>
+        <field name="model">axsync.mcp.approval</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="requester_id"/>
+                <field name="tool"/>
+                <filter name="pending" string="Pending" domain="[('state', '=', 'pending')]"/>
+                <group string="Group by">
+                    <filter name="by_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="by_requester" string="Requester" context="{'group_by': 'requester_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_axsync_mcp_approval" model="ir.actions.act_window">
+        <field name="name">Approvals</field>
+        <field name="res_model">axsync.mcp.approval</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_pending': 1}</field>
+    </record>
+</odoo>

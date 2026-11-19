@@ -1,0 +1,420 @@
+<section class="oe_container">
+  <div style="background: linear-gradient(125deg, #0b1530 0%, #14305a 55%, #17808a 100%); padding: 48px 0 52px 0;">
+    <div class="container">
+      <div class="row" style="align-items:center;">
+        <div class="col-md-6">
+          <div style="color:#f4a261;font-weight:800;letter-spacing:1.6px;font-size:13px;">AXSYNC &nbsp;|&nbsp; ODOO 18.0 &nbsp;|&nbsp; EXTRA TOOLS</div>
+          <h1 style="margin: 10px 0 14px 0; font-size: 46px; line-height:1.08; font-weight:800; color:#ffffff;">MCP Server for Odoo</h1>
+          <p style="font-size: 20px; line-height:1.5; color:#d6e4f5; margin:0 0 16px 0;">Let Claude, ChatGPT, Cursor and other AI assistants work with your Odoo, with approvals, undo and a full audit trail.</p>
+          <p style="font-size: 16px; line-height:1.55; color:#b9cde6; margin:0 0 20px 0;">Read-only by default. Sensitive fields masked. Risky actions held for a second person. Every change reversible. Every call logged.</p>
+          <p style="margin:0;"><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#f4a261;color:#0f1b33;font-size:12px;font-weight:700;">Odoo 18.0</span> <span style="display:inline-block;padding:3px 11px;border-radius:12px;background:rgba(255,255,255,.18);color:#fff;font-size:12px;font-weight:700;">23 tools</span> <span style="display:inline-block;padding:3px 11px;border-radius:12px;background:rgba(255,255,255,.18);color:#fff;font-size:12px;font-weight:700;">OAuth 2.1 + PKCE</span> <span style="display:inline-block;padding:3px 11px;border-radius:12px;background:rgba(255,255,255,.18);color:#fff;font-size:12px;font-weight:700;">No extra libraries</span></p>
+        </div>
+        <div class="col-md-6" style="margin-top:12px;">
+          <div style="border-radius:14px;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,.5);background:#fff;">
+            <div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div>
+            <img src="axsync_approval_zoom.png" class="img img-fluid" alt="Pending approval with exact arguments" style="display:block;width:100%;"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background:#ffffff;border-bottom:1px solid #e3e8f0;">
+    <div class="container" style="padding: 22px 0 8px 0;">
+      <div class="row text-center">
+        <div class="col-6 col-md-3" style="margin-bottom:14px;"><div style="font-size:38px;font-weight:800;color:#1fb5a8;line-height:1;">23</div><div style="color:#4b5a73;font-size:14px;margin-top:6px;">tools for assistants</div></div>
+        <div class="col-6 col-md-3" style="margin-bottom:14px;"><div style="font-size:38px;font-weight:800;color:#1fb5a8;line-height:1;">6</div><div style="color:#4b5a73;font-size:14px;margin-top:6px;">server-enforced safety layers</div></div>
+        <div class="col-6 col-md-3" style="margin-bottom:14px;"><div style="font-size:38px;font-weight:800;color:#1fb5a8;line-height:1;">1 click</div><div style="color:#4b5a73;font-size:14px;margin-top:6px;">to undo a change</div></div>
+        <div class="col-6 col-md-3" style="margin-bottom:14px;"><div style="font-size:38px;font-weight:800;color:#1fb5a8;line-height:1;">0</div><div style="color:#4b5a73;font-size:14px;margin-top:6px;">extra Python libraries</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Why this module</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Put an AI assistant on Odoo without handing it the keys</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row" style="align-items:center;">
+        <div class="col-md-7">
+          <p style="font-size:17px;line-height:1.6;color:#2c3a57;">Most AI connectors for business data have one setting: connected or not. That is fine for a demo and risky for a company. A small slip in a prompt can archive customers or rewrite prices, and afterwards nobody can tell what ran.</p>
+          <p style="font-size:17px;line-height:1.6;color:#2c3a57;">MCP Server for Odoo adds the missing control layer. An administrator decides which models and tools each connection may touch, which actions need a person to agree, which fields the assistant never sees, and how long the records of what happened are kept.</p>
+          <p style="font-size:17px;line-height:1.6;color:#2c3a57;">The assistant always works as a real Odoo user, so Odoo access rights and record rules still apply on top of everything you configure here.</p>
+        </div>
+        <div class="col-md-5">
+          <table class="table" style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;overflow:hidden;font-size:14px;">
+            <thead><tr style="background:#14305a;color:#fff;"><th style="color:#fff;border:0;">Open access with a shared login</th><th style="color:#fff;border:0;">With MCP Server for Odoo</th></tr></thead>
+            <tbody>
+              <tr><td>Writes happen immediately</td><td><strong style="color:#14305a;">Held by policy or approval</strong></td></tr>
+              <tr><td>One login, full rights</td><td><strong style="color:#14305a;">Access level per connection</strong></td></tr>
+              <tr><td>Sensitive fields in prompts</td><td><strong style="color:#14305a;">Masked at the source</strong></td></tr>
+              <tr><td>No record of what ran</td><td><strong style="color:#14305a;">Immutable audit log</strong></td></tr>
+              <tr><td>No way back</td><td><strong style="color:#14305a;">Journal with undo</strong></td></tr>
+              <tr><td>Tokens pasted into apps</td><td><strong style="color:#14305a;">OAuth 2.1 with consent</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">The problems it solves</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row">
+        <div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2f6fed;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">AI is useful, direct database access is not</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Giving an assistant an admin login or raw SQL is the fastest way to a bad Monday. You need a front door with rules.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #1fb5a8;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">No second pair of eyes</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Most connectors let the model write immediately. Deletes, large edits and method calls should wait for a person.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #f4a261;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Sensitive fields leak into prompts</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Tax numbers, phones and emails end up in a model context and in a vendor log unless they are masked at the source.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #8b5cf6;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Nobody can say what the AI did</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">When a record is wrong, you need to know who asked, which tool ran, with which arguments, and you need an undo.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #e5534b;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Hosted AI apps need real authentication</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Pasting long-lived tokens into a web app is not acceptable. They need OAuth, consent and revocation.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2e9d57;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Every team wants a different level</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Sales may update contacts, finance may read invoices, the auditor may read and nothing else. One switch for all does not work.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Architecture</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">How it fits together</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 10px 26px rgba(20,48,90,.10);"><img src="diagram_architecture.png" class="img img-fluid" alt="Architecture: AI clients, HTTPS endpoint, MCP server, safety layers and the Odoo ORM" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">Every client reaches one endpoint. The module sits inside Odoo and the ORM runs as the real user.</p>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Get going</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Quick start in five minutes</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row" style="align-items:center;"><div class="col-md-5" style="padding-top:8px;"><div style="display:flex;align-items:flex-start;margin-bottom:14px;"><div style="flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#14305a;color:#fff;font-weight:800;font-size:18px;text-align:center;line-height:40px;margin-right:14px;">1</div><div><div style="font-weight:700;color:#14305a;font-size:17px;">Install the module</div><div style="color:#4b5a73;line-height:1.5;">Add it to your addons path, update the Apps list and install MCP Server for Odoo.</div></div></div><div style="display:flex;align-items:flex-start;margin-bottom:14px;"><div style="flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#14305a;color:#fff;font-weight:800;font-size:18px;text-align:center;line-height:40px;margin-right:14px;">2</div><div><div style="font-weight:700;color:#14305a;font-size:17px;">Open the connection wizard</div><div style="color:#4b5a73;line-height:1.5;">MCP Server, Connections, Connect a client. Choose the user, the access level and the token lifetime.</div></div></div><div style="display:flex;align-items:flex-start;margin-bottom:14px;"><div style="flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#14305a;color:#fff;font-weight:800;font-size:18px;text-align:center;line-height:40px;margin-right:14px;">3</div><div><div style="font-weight:700;color:#14305a;font-size:17px;">Copy the snippet</div><div style="color:#4b5a73;line-height:1.5;">The wizard shows the endpoint, the token once, and snippets for Claude Code, Claude Desktop, Cursor and curl.</div></div></div><div style="display:flex;align-items:flex-start;margin-bottom:14px;"><div style="flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#14305a;color:#fff;font-weight:800;font-size:18px;text-align:center;line-height:40px;margin-right:14px;">4</div><div><div style="font-weight:700;color:#14305a;font-size:17px;">Ask the assistant to call whoami</div><div style="color:#4b5a73;line-height:1.5;">You see the Odoo user, the access level, the limits and the server version.</div></div></div><div style="display:flex;align-items:flex-start;margin-bottom:14px;"><div style="flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#14305a;color:#fff;font-weight:800;font-size:18px;text-align:center;line-height:40px;margin-right:14px;">5</div><div><div style="font-weight:700;color:#14305a;font-size:17px;">Ask a real question</div><div style="color:#4b5a73;line-height:1.5;">For example: which five customers have the highest open orders this quarter?</div></div></div></div><div class="col-md-7">      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_screenshot_7.png" class="img img-fluid" alt="Connection wizard with endpoint, token and client snippets" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">The wizard shows the token once. Odoo keeps only a hash. The token in this screenshot is a demo value that has been revoked.</p>
+</div></div>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Setup guides</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Connect your AI app</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <h4 style="color:#14305a;">Claude Code</h4>
+      <pre style="background:#eef3f9 !important;color:#0f172a !important;border:1px solid #d3dcea;border-left:5px solid #1fb5a8;padding:14px 16px;border-radius:8px;overflow:auto;white-space:pre-wrap;word-break:break-all;margin:6px 0 16px 0;"><code style="color:#0f172a !important;background:transparent !important;font-size:13px;line-height:1.55;">claude mcp add --transport http odoo https://erp.example.com/mcp --header "Authorization: Bearer axmcp_your_token"</code></pre>
+
+      <h4 style="color:#14305a;">Claude Desktop (through mcp-remote)</h4>
+      <pre style="background:#eef3f9 !important;color:#0f172a !important;border:1px solid #d3dcea;border-left:5px solid #1fb5a8;padding:14px 16px;border-radius:8px;overflow:auto;white-space:pre-wrap;word-break:break-all;margin:6px 0 16px 0;"><code style="color:#0f172a !important;background:transparent !important;font-size:13px;line-height:1.55;">{
+  "mcpServers": {
+    "odoo": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://erp.example.com/mcp", "--header", "Authorization: Bearer axmcp_your_token"]
+    }
+  }
+}</code></pre>
+
+      <h4 style="color:#14305a;">Cursor or VS Code (mcp.json)</h4>
+      <pre style="background:#eef3f9 !important;color:#0f172a !important;border:1px solid #d3dcea;border-left:5px solid #1fb5a8;padding:14px 16px;border-radius:8px;overflow:auto;white-space:pre-wrap;word-break:break-all;margin:6px 0 16px 0;"><code style="color:#0f172a !important;background:transparent !important;font-size:13px;line-height:1.55;">{
+  "mcpServers": {
+    "odoo": {
+      "url": "https://erp.example.com/mcp",
+      "headers": { "Authorization": "Bearer axmcp_your_token" }
+    }
+  }
+}</code></pre>
+
+      <h4 style="color:#14305a;">Hosted apps: Claude on the web and ChatGPT</h4>
+      <p style="line-height:1.6;">Add a custom connector and enter <code>https://erp.example.com/mcp</code>. The app discovers the sign-in details itself, registers, and sends you to Odoo. Sign in, check the access level shown on the consent screen and press Allow. No token is pasted anywhere. The exact menu names in these apps change from time to time, so check the app's current instructions for custom MCP connectors.</p>
+      <h4 style="color:#14305a;">Check the endpoint with curl</h4>
+      <pre style="background:#eef3f9 !important;color:#0f172a !important;border:1px solid #d3dcea;border-left:5px solid #1fb5a8;padding:14px 16px;border-radius:8px;overflow:auto;white-space:pre-wrap;word-break:break-all;margin:6px 0 16px 0;"><code style="color:#0f172a !important;background:transparent !important;font-size:13px;line-height:1.55;">curl -s https://erp.example.com/mcp -H 'Authorization: Bearer axmcp_your_token' -H 'Content-Type: application/json' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"whoami","arguments":{}}}'</code></pre>
+
+      <p style="color:#6b7a93;">With several databases on one server, add <code>?db=your_database</code> to the address or use a database filter.</p>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Proof, not promises</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">What the server really answered</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 10px 26px rgba(20,48,90,.10);"><img src="diagram_replay.png" class="img img-fluid" alt="Real replies of the server to blocked, previewed and held requests" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">Replies captured from a test run. The server refuses the tax ID, the edit outside the access level and the technical model, and holds the delete, the large order edit and the module build for an approver.</p>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Defence in depth</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Six safety layers</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 10px 26px rgba(20,48,90,.10);"><img src="diagram_layers.png" class="img img-fluid" alt="The six safety layers a request passes" style="display:block;width:100%;"/></div>
+      <p style="margin-top:14px;font-size:16px;color:#2c3a57;">Each layer is enforced on the server. A request that clears all six runs as the Odoo user, is journaled and is logged.</p>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Who may do what</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Access levels</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row" style="align-items:center;"><div class="col-md-4" style="padding-top:8px;">      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">An access level says what a connection may do, whatever the Odoo user could do. <strong>Read only</strong> is the default.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">A custom level lists the models, the operations and the tools. A sales assistant can update contacts and read orders, but cannot touch invoices at all.</p></div><div class="col-md-8">      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_screenshot_4.png" class="img img-fluid" alt="Access level: custom level for a sales assistant" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">The Sales assistant level: contacts can be read, created and updated; orders and products can only be read; nothing can be deleted or called.</p>
+</div></div>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Rules that decide</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Policies</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Policies decide what happens to a call that the access level allows. Combine tool, model, operation, user, group, a record condition and a minimum number of records. The strictest matching policy wins.</p>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_screenshot_5.png" class="img img-fluid" alt="List of policies: block, require approval, ask for confirmation" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">Policies from the demo: accounting entries blocked, large orders and deletes held for approval, mass edits and method calls asked first.</p>
+      <table class="table table-bordered" style="margin-top: 18px;background:#fff;">
+        <thead><tr style="background:#14305a;"><th style="color:#fff;">Example</th><th style="color:#fff;">Setting</th></tr></thead>
+        <tbody>
+          <tr><td>Nobody touches accounting entries</td><td>Model: Journal Entry, operation: any, action: block</td></tr>
+          <tr><td>Deletes always need a second person</td><td>Operation: delete, action: require approval</td></tr>
+          <tr><td>Large orders need an approval</td><td>Model: Sales Order, operation: update, record condition on the amount, action: require approval</td></tr>
+          <tr><td>Mass edits ask first</td><td>Operation: update, from 10 records, action: ask for confirmation</td></tr>
+          <tr><td>Only managers may confirm orders</td><td>Tool: call a method, model: Sales Order, group: Sales / User, action: require approval</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Human in the loop</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Approvals by a second person</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row" style="align-items:center;"><div class="col-md-4" style="padding-top:8px;">      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">When a policy requires an approval, the assistant receives a request number and carries on with other work.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">An approver sees exactly what will run, with the full arguments, and decides in Odoo. The requester cannot approve their own request.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">On approval, Odoo runs the stored call as the requester, so nothing can be swapped after the decision.</p></div><div class="col-md-8">      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_approval_zoom.png" class="img img-fluid" alt="Pending approval with exact arguments" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">A pending approval for a sales order edit. The arguments are shown exactly as the assistant sent them.</p>
+</div></div>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_approvals.png" class="img img-fluid" alt="List of approvals with their states" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">The approval list after the approver has decided on four requests.</p>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Privacy at the source</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Field masks</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row" style="align-items:center;"><div class="col-md-8">      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_screenshot_6.png" class="img img-fluid" alt="Field masks list: hidden, partial and hash" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">Three masks from the demo: tax IDs hidden, phones partial, emails hashed. Groups can be excluded from a mask.</p>
+</div><div class="col-md-4" style="padding-top:8px;">      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Masks work at the source, before data reaches the assistant.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;"><strong>Hidden</strong> fields do not exist for the assistant: they cannot be read, searched, grouped, ordered, exported or written.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;"><strong>Partial</strong> keeps only the ends of a value. <strong>Hash</strong> returns a stable short code, so the assistant can still compare values.</p></div></div>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Mistakes are recoverable</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Change journal and undo</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row" style="align-items:center;"><div class="col-md-4" style="padding-top:8px;">      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Every write stores the old values next to the new ones.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Press <strong>Undo</strong> on a single change or on a whole batch. If someone edited the record after the AI did, undo tells you instead of overwriting their work.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Deletes archive records that have an active flag, and posted documents are refused.</p></div><div class="col-md-8">      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_screenshot_3.png" class="img img-fluid" alt="Change journal with undo" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">The change journal with before and after values. Undo is one button.</p>
+</div></div>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Full traceability</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Audit log and usage</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Every call is recorded with the user, the client, the tool, the model, the operation, the number of records, the status and the duration, including calls that were refused. The log is written through its own database cursor, so a rolled-back request still leaves its trace. Filter, group, chart or pivot it like any Odoo list.</p>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_screenshot_1.png" class="img img-fluid" alt="Audit log list" style="display:block;width:100%;"/></div>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Authentication</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Tokens and OAuth</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row" style="align-items:center;"><div class="col-md-4" style="padding-top:8px;">      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Tokens show a short prefix only. Give each one its own access level and an IP range, and let it expire (90 days by default). Revoke with one button.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Hosted AI apps use OAuth 2.1: the user signs in to Odoo and sees which access level the app will receive before pressing Allow.</p></div><div class="col-md-8">      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_tokens.png" class="img img-fluid" alt="List of access tokens with expiry and last use" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">Expiry, last use, use count and status are visible for every token.</p>
+</div></div>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 10px 26px rgba(20,48,90,.10);"><img src="diagram_oauth.png" class="img img-fluid" alt="OAuth 2.1 flow with PKCE" style="display:block;width:100%;"/></div>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_screenshot_8.png" class="img img-fluid" alt="OAuth consent screen" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">The consent screen shows the app, the Odoo user and the access level the app will receive.</p>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Work at scale</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Bulk jobs, live pages and CSV export</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">Tell the assistant to update a hundred contacts or archive an old product range. The job runs in the background in batches and can be followed in Odoo.</p>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_jobs.png" class="img img-fluid" alt="Bulk jobs list with progress" style="display:block;width:100%;"/></div>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;margin-top:18px;">Publish a read-only live page with a table and a bar chart, for example open orders by customer. Pages are private, visible to signed-in users under their own rights, or open to anyone with the link after an approval.</p>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_page.png" class="img img-fluid" alt="Live page with a table and a bar chart" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">A live page published by the assistant: open orders by customer, with the totals as bars.</p>
+      <p style="font-size:16px;line-height:1.6;color:#2c3a57;margin-top:18px;">CSV exports apply masks, neutralise formulas that start with = + - or @, and download through a one-hour link.</p>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Module builder</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Build a custom module with a sentence</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div style="background:linear-gradient(125deg,#0b1530,#14305a);border-radius:14px;padding:26px 28px;color:#fff;">
+        <p style="font-size:18px;line-height:1.6;margin:0 0 10px 0;color:#e6eefc;">Ask the assistant for a small custom app, for example "log customer site visits with date, customer, notes and status".</p>
+        <p style="font-size:16px;line-height:1.6;margin:0;color:#b9cde6;">The module builder validates the specification and returns an installable ZIP for this Odoo version with models, list and form views, a menu and access rights. Nothing is installed on your server. The default policy requires an approval, and you review the ZIP like any other code before you install it. In our tests the generated module installed cleanly on Odoo 16, 17, 18, 19 and 20.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Control panel</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Settings</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row" style="align-items:center;"><div class="col-md-8">      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_settings.png" class="img img-fluid" alt="MCP Server settings" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">Settings: kill switch, default access level, limits, retention, OAuth and origins.</p>
+</div><div class="col-md-4" style="padding-top:8px;">      <p style="font-size:16px;line-height:1.6;color:#2c3a57;">One page holds the kill switch, the default access level, who may connect, the default for writes without a policy, calls per minute, writes per day, record and text limits, retention for the logs, token and approval lifetimes, the OAuth switch, allowed browser origins and the public base URL.</p></div></div>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Everything inside</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Feature breakdown</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row">
+        <div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2f6fed;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">A complete MCP endpoint inside Odoo</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Streamable HTTP at /mcp with JSON-RPC 2.0, initialize, ping, tools, resources and prompts, batches of up to 20 calls and the three current protocol versions. Clients get a proper 401 with a resource metadata pointer, so they know how to sign in.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #1fb5a8;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Two ways to authenticate</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Access tokens for developer tools: hashed at rest, shown once, with an expiry, an IP allowlist (single addresses or CIDR ranges), a per-token access level, last used time and use count. OAuth 2.1 with PKCE, dynamic client registration and a consent screen for hosted AI apps. Refresh tokens rotate on every use.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #f4a261;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Access levels</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Read only is the default. Full means everything the Odoo user may do. Custom lists the models, the operations (read, create, update, delete, call methods) and the tools one connection may use. Levels can be forced on every connection.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #8b5cf6;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Policies with four outcomes</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Allow, ask, require approval or block. Rules can filter by tool, model, operation, user, group, a record condition and a minimum record count. When several policies match, the strictest wins.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #e5534b;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Approvals by a second person</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">The request keeps the exact arguments. The requester cannot approve it. An approver presses Approve and run and Odoo executes the stored call as the requester. Requests expire and create activities for approvers.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2e9d57;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Confirmation with a dry-run preview</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">For "ask" policies the assistant first gets a preview of what would change, nothing is written, and a confirm code bound to the user, the tool and the exact arguments. Change any argument and the code stops working.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2f6fed;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Field masks</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Hide a field completely, show only the ends of a value, or replace it with a stable hash. Hidden fields cannot be read, searched, grouped, ordered, exported or described. Default masking catches fields named like passwords, tokens and keys.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #1fb5a8;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Change journal and undo</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Every create, update and delete stores the old values. Undo a single change or a whole batch. If the record changed in the meantime, undo says so instead of overwriting.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #f4a261;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Safe deletes</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Records with an active flag are archived, not removed. Other records are deleted only in draft or cancelled states. Posted and confirmed documents are refused.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #8b5cf6;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Immutable audit log</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Every call is recorded, including refusals: user, client, tool, model, operation, record count, status, duration. Written through a separate cursor so a rolled-back transaction cannot erase it. List, graph and pivot views included.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #e5534b;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Read tools that understand Odoo</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Search with domains and date macros, count, read by id, group and total with date granularity, find by name, CSV export of up to 10000 records with a formula-injection guard.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2e9d57;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Method calls under control</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Call public business methods such as action_confirm. Private methods and the generic write, create and unlink are refused. The default policy asks for confirmation first.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2f6fed;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Bulk jobs</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Update or archive thousands of records in the background in batches of 200. The record set is fixed at the start, progress is visible in Odoo and through the job_status tool.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #1fb5a8;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Live pages</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">The assistant can publish a read-only page with a table and a bar chart from a query. Private, signed-in or link access; link pages always need an approval and an expiry.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #f4a261;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Module builder</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Describe a custom model in a sentence and receive an installable module ZIP for your Odoo version: model, fields, views, menu and access rights. Nothing is installed automatically.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #8b5cf6;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Operations controls</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Kill switch, rate limit per minute, daily write quota, maximum records per call, text size limit, allowed browser origins, retention for logs, and a one-click revoke for every token and OAuth connection.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #e5534b;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Connection wizard</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Generates the endpoint, the token and ready-to-paste snippets for Claude Code, Claude Desktop, Cursor and curl.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2e9d57;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Resources and prompts</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Built-in help, model list and per-model schema resources, and five default prompts that you can edit or extend.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Reference</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Tool reference (23 tools)</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <p style="color:#4b5a73;">Assistants discover these automatically. Which ones a connection can use depends on its access level and on the tool switches in Configuration.</p>
+      <table class="table table-bordered table-sm" style="background:#fff;font-size:14px;">
+        <thead><tr style="background:#14305a;"><th style="color:#fff;">Tool</th><th style="color:#fff;">Kind</th><th style="color:#fff;">What it does</th></tr></thead>
+        <tbody>
+          <tr><td><code>whoami</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Show the Odoo user, company, access level, limits and server version this connection uses. Call this first.</td></tr>
+          <tr><td><code>list_models</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>List the models the user can read, optionally filtered by a text query on name or technical name.</td></tr>
+          <tr><td><code>describe_model</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Return the fields of a model with type, label, required flag, relation, selection values and whether the field is masked, plus the operations this connection may run on it.</td></tr>
+          <tr><td><code>search_records</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Search and read records of a model. Returns at most the configured maximum per call; use offset to page.</td></tr>
+          <tr><td><code>count_records</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Count the records matching a domain.</td></tr>
+          <tr><td><code>read_records</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Read specific records by id.</td></tr>
+          <tr><td><code>aggregate</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Group records and compute totals, for example group_by ["partner_id"] with measures ["amount_total:sum"]. Date fields accept a granularity: "date_order:month".</td></tr>
+          <tr><td><code>name_search</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Find records by display name, the way an Odoo many2one field does.</td></tr>
+          <tr><td><code>export_records</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Export up to 10000 records to a CSV file and return a download link. Masks apply.</td></tr>
+          <tr><td><code>create_records</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d98a1f;color:#fff;font-size:12px;font-weight:700;">write</span></td><td>Create one or more records. Every record is written to the change journal and can be undone.</td></tr>
+          <tr><td><code>update_records</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d98a1f;color:#fff;font-size:12px;font-weight:700;">write</span></td><td>Update records selected by ids or by a domain. Old and new values are journaled so the change can be undone.</td></tr>
+          <tr><td><code>delete_records</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d98a1f;color:#fff;font-size:12px;font-weight:700;">write</span></td><td>Delete records. Records with an active flag are archived (and can be restored with undo_change). Others are removed only when they are in a draft or cancelled state. Posted or confirmed documents are refused.</td></tr>
+          <tr><td><code>call_method</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d98a1f;color:#fff;font-size:12px;font-weight:700;">write</span></td><td>Call a public method on records, for example action_confirm on sale.order. Private methods and generic write, create and unlink are refused. Methods cannot be rolled back, so there is no dry run and the default policy asks for confirmation.</td></tr>
+          <tr><td><code>undo_change</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d98a1f;color:#fff;font-size:12px;font-weight:700;">write</span></td><td>Undo a journaled change by journal id or by batch id. Refused when the record changed since.</td></tr>
+          <tr><td><code>list_changes</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>List recent changes made through MCP by this user, newest first.</td></tr>
+          <tr><td><code>approval_status</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Check the state of an approval request raised by a previous call.</td></tr>
+          <tr><td><code>list_approvals</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>List this user's approval requests.</td></tr>
+          <tr><td><code>start_bulk_job</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d98a1f;color:#fff;font-size:12px;font-weight:700;">write</span></td><td>Update or archive many records in batches in the background. The record set is fixed when the job starts. Use job_status to follow it.</td></tr>
+          <tr><td><code>job_status</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>Progress of a bulk job.</td></tr>
+          <tr><td><code>publish_page</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d98a1f;color:#fff;font-size:12px;font-weight:700;">write</span></td><td>Publish a read-only live page (table with optional bar chart) built from a query. Modes: private (owner only), login (any signed in user, shown with their own rights) and link (anyone with the link, always needs an approval).</td></tr>
+          <tr><td><code>list_pages</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#2e9d57;color:#fff;font-size:12px;font-weight:700;">read</span></td><td>List the live pages published by this user.</td></tr>
+          <tr><td><code>unpublish_page</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d98a1f;color:#fff;font-size:12px;font-weight:700;">write</span></td><td>Take a live page offline.</td></tr>
+          <tr><td><code>build_module</code></td><td><span style="display:inline-block;padding:3px 11px;border-radius:12px;background:#d1434b;color:#fff;font-size:12px;font-weight:700;">admin</span></td><td>Generate a small installable Odoo module (models, fields, list and form views, menu, access rights) from a specification and return a ZIP download link. Nothing is installed on this server. Models must be named like x_something or vendor.thing.</td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #d5dde9;box-shadow:0 14px 34px rgba(20,48,90,.16);background:#fff;"><div style="height:26px;background:#eaeff6;padding:8px 0 0 12px;line-height:0;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f06a6a;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f4c04f;margin-right:6px;"></span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#58c27d;"></span></div><img src="axsync_tools.png" class="img img-fluid" alt="Tool list with switches" style="display:block;width:100%;"/></div>
+      <p style="margin: 8px 0 0 0; font-size: 13px; color:#6b7a93;">Every tool can be switched off in Configuration.</p>
+
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">What you get</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Business benefits</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row">
+        <div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #f4a261;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Adopt AI without the fear</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Read-only first, writes by rule, risky actions by approval.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #8b5cf6;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Protect sensitive data</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Masks and access levels keep tax numbers, phones and emails out of prompts.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #e5534b;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Recover from mistakes</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">A journal with undo and an audit log that cannot be edited.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2e9d57;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Less manual reporting</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Ask for totals, lists and charts in plain language and publish them as live pages.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #2f6fed;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Faster data clean-up</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Preview, confirm and run bulk updates in the background.</p></div></div><div class="col-md-4" style="margin-bottom: 18px;"><div style="height:100%;background:#fff;border:1px solid #e3e8f0;border-top:4px solid #1fb5a8;border-radius:10px;padding:18px 18px 14px;box-shadow:0 4px 14px rgba(20,48,90,.07);"><h5 style="margin:0 0 8px 0;color:#14305a;font-weight:700;">Native workflow</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Standard groups, activities, cron jobs and views. No external service and no extra library.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Security</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Security notes</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div style="background:#fff;border:1px solid #e3e8f0;border-left:5px solid #1fb5a8;border-radius:10px;padding:20px 24px;">
+      <ul style="margin:0;line-height:1.7;color:#2c3a57;">
+        <li>Access tokens and OAuth codes are stored as SHA-256 hashes. Refresh tokens rotate on every use.</li>
+        <li>OAuth accepts only PKCE with S256. Redirect addresses are validated and client registration is capped per day.</li>
+        <li>Technical models (<code>ir.*</code>, <code>base.*</code>, API keys, mail queue, settings, the module's own log and token tables) are not reachable through MCP. Users, groups and similar models are read only.</li>
+        <li>The engine runs every call as the real Odoo user. Standard access rights and record rules apply.</li>
+        <li>Confirmation codes are signed, bound to the user, the tool and the exact arguments, and expire after ten minutes.</li>
+        <li>Request bodies are limited to 2 MB and batches to 20 calls. A rate limit and a daily write quota apply per user.</li>
+        <li>Live pages are served with a content security policy and escape all values.</li>
+        <li>The audit log is written through a separate cursor and has no edit or delete rights in the interface.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0; background-color: #f4f7fb;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Facts and limits</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Compatibility and requirements</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <table class="table table-bordered" style="background:#fff;">
+        <tbody>
+          <tr><th style="width: 30%;background:#f4f7fb;">Odoo version</th><td>18.0 only. Separate builds exist for 16, 17, 18, 19 and 20.</td></tr>
+          <tr><th style="background:#f4f7fb;">Required Odoo apps</th><td>Base, web and Discuss (mail). Works with any other application.</td></tr>
+          <tr><th style="background:#f4f7fb;">Python libraries</th><td>None beyond Odoo itself.</td></tr>
+          <tr><th style="background:#f4f7fb;">Hosting</th><td>Self-hosted and Odoo.sh. Odoo Online (SaaS) does not allow custom modules and is not supported.</td></tr>
+          <tr><th style="background:#f4f7fb;">Network</th><td>Public HTTPS for hosted AI apps. A private address is enough for tools running on your own machine.</td></tr>
+          <tr><th style="background:#f4f7fb;">Testing</th><td>An automated test suite (engine and HTTP, including a full OAuth flow) runs on Odoo 18.0, and the interface was checked in a browser against a live demo database. A scripted client made 29 real MCP calls against the running server.</td></tr>
+          <tr><th style="background:#f4f7fb;">Data and services</th><td>No external services. Everything is stored in your database.</td></tr>
+        </tbody>
+      </table>
+      <h5 style="color:#14305a;margin-top:22px;">Known limitations</h5>
+      <ul style="line-height:1.7;color:#2c3a57;">
+        <li>The transport is request and response over HTTP POST. There is no server push (SSE). GET and DELETE on /mcp answer 405.</li>
+        <li>The rate limit counts calls in the audit log. It protects Odoo from loops, not from a distributed attack; use your proxy for that.</li>
+        <li>Method calls cannot be rolled back and have no dry run. The default policy asks for confirmation.</li>
+        <li>Bulk jobs update or archive. They do not create or delete records.</li>
+        <li>The module builder only produces a ZIP. It never installs or runs generated code.</li>
+        <li>Undo restores the journaled fields. Side effects of Odoo business logic, such as emails or stock moves, are not reversed.</li>
+        <li>OAuth with several databases needs a database filter so the host name selects the database.</li>
+        <li>An assistant can do only what the Odoo user and the access level allow, but a token is as powerful as that combination. Protect it like a password.</li>
+        <li>Labels and texts are in English and can be translated with the standard Odoo tools.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div class="oe_row oe_spaced" style="padding: 44px 0;">
+    <div class="container">
+      <div style="color:#1fb5a8;font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase;margin-bottom:6px;">Questions</div><h2 style="margin: 0 0 8px 0; color:#14305a; font-weight:800; font-size:32px;">Frequently asked questions</h2><div style="width:64px;height:4px;background:#f4a261;border-radius:2px;margin:0 0 20px 0;"></div>
+      <div class="row">
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Can the assistant do anything my Odoo user can do?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Only within the access level of the connection. After installation the default level is Read only. Writing needs a level that allows it, and policies can still ask or require an approval.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Which AI apps work?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Any client that speaks MCP over Streamable HTTP: Claude, ChatGPT custom connectors, Claude Code, Claude Desktop (through mcp-remote), Cursor, VS Code and others. Hosted apps use OAuth; developer tools use a token.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Does my data go to a third party?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">The module itself calls nothing external. The answers to the assistant's requests go to the AI service you use, so use access levels and masks to limit what it can see.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Can it modify accounting entries?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Only if the access level allows it. A block policy on Journal Entry takes a minute to create and is shown in the Policies section above. Posted documents cannot be deleted through the module.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">What happens if the assistant makes a mistake?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Every write is journaled. Open the change journal, press Undo, or ask the assistant to call undo_change. Method calls are not undoable, which is why they ask for confirmation by default.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Can a user approve their own request?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">No. The approver must be a different person with the MCP Approver group.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Where are tokens stored?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Only as a SHA-256 hash. The token is shown once when it is created. A lost token must be replaced.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Does it work with Odoo.sh?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Yes. Add the module like any custom module. Odoo Online (SaaS) does not allow custom modules, so it is not supported.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Do I need a public server?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">For hosted AI apps, yes: they must reach your /mcp address over HTTPS. For Claude Code, Cursor and similar tools running on your machine, a private address or a VPN is enough.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">Does it support several companies?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">The assistant works as the Odoo user, so it sees the companies that user can see and Odoo's multi-company rules apply.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">How do I switch everything off?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Untick Server enabled in the settings. The endpoint answers 503 at once. You can also revoke a single token or connection.</p></div></div>
+        <div class="col-md-6" style="margin-bottom:16px;"><div style="background:#fff;border:1px solid #e3e8f0;border-radius:10px;padding:16px 18px;height:100%;"><h5 style="color:#14305a;font-weight:700;margin:0 0 8px 0;">How can I contact AXSync for support?</h5><p style="margin:0;color:#4b5a73;line-height:1.55;">Email <a href="mailto:hunain@axsync.com">hunain@axsync.com</a> or use the Contact the Author option on this Odoo Apps Store page.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="oe_container">
+  <div style="background: linear-gradient(125deg, #0b1530 0%, #14305a 55%, #17808a 100%); padding: 46px 0; color:#fff;">
+    <div class="container">
+      <div class="row" style="align-items:center;">
+        <div class="col-md-8">
+          <h2 style="margin: 0 0 8px 0; font-weight:800; color:#fff;">Give your AI assistant a seat at the table, not the keys.</h2>
+          <p style="font-size: 17px; color:#d6e4f5; margin:0;">Install MCP Server for Odoo and connect your first assistant in minutes. Questions? <a href="mailto:hunain@axsync.com" style="color:#f4a261;font-weight:700;">hunain@axsync.com</a> &nbsp;|&nbsp; <a href="https://www.axsync.com" style="color:#f4a261;font-weight:700;">www.axsync.com</a></p>
+        </div>
+        <div class="col-md-4 text-center" style="margin-top:10px;"><img src="axsync_icon.png" alt="AXSync" style="width:110px;height:110px;border-radius:24px;box-shadow:0 14px 34px rgba(0,0,0,.4);"/></div>
+      </div>
+      <p style="margin:22px 0 0 0;font-size:12px;color:#9fb6d3;">Published by AXSync. This module is not an official Odoo product. Odoo is a trademark of Odoo S.A. Claude, ChatGPT, Cursor and other names are trademarks of their owners and are used only to describe compatibility with the open Model Context Protocol.</p>
+    </div>
+  </div>
+</section>
