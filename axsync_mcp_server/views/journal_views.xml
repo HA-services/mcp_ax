@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_axsync_mcp_journal_list" model="ir.ui.view">
+        <field name="name">axsync.mcp.journal.list</field>
+        <field name="model">axsync.mcp.journal</field>
+        <field name="arch" type="xml">
+            <list string="Change journal" create="false" decoration-muted="undone">
+                <field name="create_date"/>
+                <field name="user_id"/>
+                <field name="tool"/>
+                <field name="model"/>
+                <field name="record_name"/>
+                <field name="operation"/>
+                <field name="batch"/>
+                <field name="undone"/>
+                <button name="action_undo" type="object" string="Undo" icon="fa-undo" invisible="undone or not undoable"
+                        confirm="Restore the previous values?"/>
+                <field name="undoable" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_axsync_mcp_journal_form" model="ir.ui.view">
+        <field name="name">axsync.mcp.journal.form</field>
+        <field name="model">axsync.mcp.journal</field>
+        <field name="arch" type="xml">
+            <form string="Journal entry" create="false" edit="false">
+                <header>
+                    <button name="action_undo" type="object" string="Undo this change" class="btn-primary"
+                            invisible="undone or not undoable"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="tool"/>
+                            <field name="model"/>
+                            <field name="res_id"/>
+                            <field name="record_name"/>
+                        </group>
+                        <group>
+                            <field name="operation"/>
+                            <field name="batch"/>
+                            <field name="undoable"/>
+                            <field name="undone"/>
+                            <field name="undone_on"/>
+                            <field name="undone_by"/>
+                        </group>
+                    </group>
+                    <group string="Before"><field name="old_values" nolabel="1"/></group>
+                    <group string="After"><field name="new_values" nolabel="1"/></group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_axsync_mcp_journal_search" model="ir.ui.view">
+        <field name="name">axsync.mcp.journal.search</field>
+        <field name="model">axsync.mcp.journal</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="record_name"/>
+                <field name="model"/>
+                <field name="user_id"/>
+                <field name="batch"/>
+                <filter name="open" string="Not undone" domain="[('undone', '=', False)]"/>
+                <filter name="undone" string="Undone" domain="[('undone', '=', True)]"/>
+                <group string="Group by">
+                    <filter name="by_model" string="Model" context="{'group_by': 'model'}"/>
+                    <filter name="by_user" string="User" context="{'group_by': 'user_id'}"/>
+                    <filter name="by_op" string="Operation" context="{'group_by': 'operation'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_axsync_mcp_journal" model="ir.actions.act_window">
+        <field name="name">Change journal</field>
+        <field name="res_model">axsync.mcp.journal</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

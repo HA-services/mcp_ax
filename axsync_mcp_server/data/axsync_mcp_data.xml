@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_axsync_mcp_approval" model="ir.sequence">
+            <field name="name">MCP Approval</field>
+            <field name="code">axsync.mcp.approval</field>
+            <field name="prefix">APR</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="profile_read_only" model="axsync.mcp.profile">
+            <field name="name">Read only</field>
+            <field name="level">read_only</field>
+            <field name="description">The assistant can search, read, aggregate and export. It cannot create, change or delete anything.</field>
+        </record>
+        <record id="profile_standard" model="axsync.mcp.profile">
+            <field name="name">Standard (user's own rights)</field>
+            <field name="level">full</field>
+            <field name="description">The assistant can do whatever the user may do in Odoo, subject to the policies, masks and approvals configured here.</field>
+        </record>
+
+        <record id="setting_default" model="axsync.mcp.setting">
+            <field name="default_profile_id" ref="profile_read_only"/>
+        </record>
+
+        <record id="policy_deletes_need_approval" model="axsync.mcp.policy">
+            <field name="name">Deletes need an approval</field>
+            <field name="sequence">10</field>
+            <field name="operation">unlink</field>
+            <field name="action">approve</field>
+            <field name="message">Deleting records needs approval from another person. A request was created.</field>
+        </record>
+        <record id="policy_method_calls_ask" model="axsync.mcp.policy">
+            <field name="name">Method calls need confirmation</field>
+            <field name="sequence">20</field>
+            <field name="operation">call</field>
+            <field name="action">ask</field>
+        </record>
+        <record id="policy_bulk_jobs_ask" model="axsync.mcp.policy">
+            <field name="name">Bulk jobs need confirmation</field>
+            <field name="sequence">30</field>
+            <field name="action">ask</field>
+            <field name="tool_ids" eval="[(6, 0, [ref('tool_start_bulk_job')])]"/>
+        </record>
+        <record id="policy_module_builds_approve" model="axsync.mcp.policy">
+            <field name="name">Module builds need an approval</field>
+            <field name="sequence">40</field>
+            <field name="action">approve</field>
+            <field name="tool_ids" eval="[(6, 0, [ref('tool_build_module')])]"/>
+        </record>
+
+        <record id="prompt_weekly_sales" model="axsync.mcp.prompt">
+            <field name="name">weekly_sales_review</field>
+            <field name="title">Weekly sales review</field>
+            <field name="description">Summarise last week's sales orders and highlight movers.</field>
+            <field name="argument_names">days</field>
+            <field name="template">Review sales for the last {days} days. Use whoami and describe_model on sale.order first. Group confirmed orders by salesperson and by customer with aggregate, compare with the previous period, and list the five largest open quotations. Finish with three observations and one suggested follow-up. If the sale.order model is not available, say so and stop.</field>
+        </record>
+        <record id="prompt_overdue_invoices" model="axsync.mcp.prompt">
+            <field name="name">overdue_invoices</field>
+            <field name="title">Overdue invoices follow-up</field>
+            <field name="description">Find overdue customer invoices and draft follow-up notes.</field>
+            <field name="argument_names">min_amount</field>
+            <field name="template">Find posted customer invoices on account.move that are unpaid and past due, with an amount of at least {min_amount}. Group by customer using aggregate, then show the oldest invoice for each of the top ten customers. Draft one short, polite reminder per customer but do not send anything.</field>
+        </record>
+        <record id="prompt_inventory_health" model="axsync.mcp.prompt">
+            <field name="name">inventory_health</field>
+            <field name="title">Inventory health check</field>
+            <field name="description">Look for negative stock, dead stock and reorder risks.</field>
+            <field name="template">Check stock health with the stock.quant and product.product models. Report negative quantities, products with no movement in 90 days that still hold stock, and storable products below their reorder minimum. Keep the answer under 300 words and name the models and filters you used.</field>
+        </record>
+        <record id="prompt_data_quality" model="axsync.mcp.prompt">
+            <field name="name">partner_data_quality</field>
+            <field name="title">Partner data quality</field>
+            <field name="description">Find duplicates and gaps in customer records.</field>
+            <field name="template">Audit res.partner for likely duplicates (same email or same name with different spelling), customers without country, and companies without VAT. Use count_records and aggregate first, then sample at most ten records per issue. Do not change anything. Propose a cleanup plan and ask before using update_records.</field>
+        </record>
+        <record id="prompt_month_end" model="axsync.mcp.prompt">
+            <field name="name">month_end_check</field>
+            <field name="title">Month-end checklist</field>
+            <field name="description">Review open items before closing the month.</field>
+            <field name="argument_names">month</field>
+            <field name="template">Prepare a month-end review for {month}. Check draft invoices and vendor bills, unreconciled bank statement lines, open sales orders without delivery, and purchase orders received but not billed. For each item report a count and the three largest records. Do not post or change anything.</field>
+        </record>
+    </data>
+</odoo>
